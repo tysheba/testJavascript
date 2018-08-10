@@ -17,14 +17,14 @@
     // var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
     // // Example queryURL for musixmatch API
     // var queryURL = "https://api.musixmatch.com/ws/1.1/track.search?format=jsonp&callback=callback&q_track=God's%20Plan&q_artist=drake&quorum_factor=1&apikey=cad5fbf7afb8c5ce846d140b38ac51ef"
-    var queryURL = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=json&callback=callback&track_id=152383615&apikey=cad5fbf7afb8c5ce846d140b38ac51ef"
+    var queryURL = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=jsonp&callback=callback&track_id=152383615&apikey=cad5fbf7afb8c5ce846d140b38ac51ef"
 
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function (response) {
       console.log(response);
-      console.log(JSON.stringify(response));
+      console.log(response.body.lyrics);
     });
   </script>
 
